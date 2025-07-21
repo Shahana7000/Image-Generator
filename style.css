@@ -1,0 +1,195 @@
+/* Dark Mode Styles */
+body.dark-mode {
+    background: linear-gradient(135deg, #1e1e2f, #2c2c40);
+    color: #f0f0f0;
+}
+
+body.dark-mode .container {
+    background: #2c2c3f;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .header h1,
+body.dark-mode .select-label {
+    color: #f0f0f0;
+}
+
+body.dark-mode #prompt-input,
+body.dark-mode .custom-select {
+    background: #3a3a4f;
+    color: #fff;
+    border: 1px solid #555;
+}
+
+body.dark-mode .prompt-container button,
+body.dark-mode .generate-btn {
+    background-color: #8e44ad;
+}
+
+body.dark-mode .prompt-container button:hover,
+body.dark-mode .generate-btn:hover {
+    background-color: #732d91;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #d3cce3, #e9e4f0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo i {
+  font-size: 24px;
+  color: #6c5ce7;
+}
+
+.header h1 {
+  font-size: 20px;
+  color: #333;
+  font-weight: 600;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #555;
+  transition: color 0.3s;
+}
+
+.theme-toggle:hover {
+  color: #000;
+}
+
+.prompt-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.prompt-container {
+  display: flex;
+  gap: 8px;
+}
+
+#prompt-input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  resize: vertical;
+  font-size: 14px;
+}
+
+.prompt-container button {
+  background-color: #6c5ce7;
+  border: none;
+  color: white;
+  padding: 0 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+.prompt-container button:hover {
+  background-color: #5a4bcf;
+}
+
+.prompt-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.select-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.select-label {
+  font-size: 14px;
+  margin-bottom: 4px;
+  color: #444;
+}
+
+.custom-select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.generate-btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.generate-btn {
+  background-color: #6c5ce7;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.generate-btn:hover {
+  background-color: #5a4bcf;
+  transform: translateY(-2px);
+}
+
+.image-gallery {
+  margin-top: 20px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
+
+.image-gallery img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}

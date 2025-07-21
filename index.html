@@ -30,7 +30,7 @@
             required 
             autofocus>
           </textarea>
-          <button class="prompt-btn" type="submit" aria-label="Generate Image">
+          <button class="generate-btn" type="submit">
             <i class="fa-solid fa-dice"></i>
           </button>
         </div>
@@ -48,14 +48,16 @@
             </select>
           </div>
 
-          <!-- Image Size Selection -->
+          <!-- Image Quantity Selection -->
           <div class="select-wrapper">
-            <label for="image-size" class="select-label">Image Size:</label>
-            <select id="image-size" class="custom-select" required>
-              <option value="" selected disabled>Select Image Size</option>
-              <option value="256x256">Small (256x256)</option>
-              <option value="512x512">Medium (512x512)</option>
-              <option value="1024x1024">Large (1024x1024)</option>
+            <label for="image-quantity" class="select-label">Image Quantity:</label>
+            <select id="image-quantity" class="custom-select" required>
+              <option value="" selected disabled>Select Quantity</option>
+              <option value="1">1 Image</option>
+              <option value="2">2 Images</option>
+              <option value="3">3 Images</option>
+              <option value="4">4 Images</option>
+              <option value="5">5 Images</option>
             </select>
           </div>
 
@@ -72,6 +74,14 @@
           </div>
 
         </div>
+
+        <!-- Generate Button -->
+        <div class="generate-btn-container">
+          <button class="generate-btn" type="submit">
+            <i class="fa-solid fa-magic-wand-sparkles"></i> Generate
+          </button>
+        </div>
+
       </form>
 
       <section class="image-gallery">
