@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Image Generator</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="logo-wrapper">
+        <div class="logo">
+          <i class="fa-solid fa-wand-sparkles"></i>
+        </div>
+        <h1>AI Image Generator</h1>
+      </div>
+      <button class="theme-toggle" aria-label="Toggle Theme">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+    </header>
+
+    <main class="main-container">
+      <form action="#" class="prompt-form">
+        <div class="prompt-container">
+          <textarea 
+            id="prompt-input" 
+            placeholder="Describe your imagination in detail..." 
+            required 
+            autofocus>
+          </textarea>
+          <button class="prompt-btn" type="submit" aria-label="Generate Image">
+            <i class="fa-solid fa-dice"></i>
+          </button>
+        </div>
+
+        <div class="prompt-actions">
+
+          <!-- Model Selection -->
+          <div class="select-wrapper">
+            <label for="model-select" class="select-label">Select Model:</label>
+            <select id="model-select" class="custom-select" required>
+              <option value="" selected disabled>Select Model</option>
+              <option value="dalle-3">DALL·E 3</option>
+              <option value="sdxl">Stable Diffusion XL</option>
+              <option value="midjourney">MidJourney</option>
+            </select>
+          </div>
+
+          <!-- Image Size Selection -->
+          <div class="select-wrapper">
+            <label for="image-size" class="select-label">Image Size:</label>
+            <select id="image-size" class="custom-select" required>
+              <option value="" selected disabled>Select Image Size</option>
+              <option value="256x256">Small (256x256)</option>
+              <option value="512x512">Medium (512x512)</option>
+              <option value="1024x1024">Large (1024x1024)</option>
+            </select>
+          </div>
+
+          <!-- Page Type Selection -->
+          <div class="select-wrapper">
+            <label for="page-type" class="select-label">Page Type:</label>
+            <select id="page-type" class="custom-select" required>
+              <option value="" selected disabled>Select Page Type</option>
+              <option value="landscape">Landscape</option>
+              <option value="portrait">Portrait</option>
+              <option value="square">Square</option>
+              <option value="panorama">Panorama</option>
+            </select>
+          </div>
+
+        </div>
+      </form>
+
+      <section class="image-gallery">
+        <!-- Generated images will appear here -->
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
