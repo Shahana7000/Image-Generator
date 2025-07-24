@@ -1,44 +1,14 @@
-/* Dark Mode Styles */
-body.dark-mode {
-    background: linear-gradient(135deg, #1e1e2f, #2c2c40);
-    color: #f0f0f0;
-}
-
-body.dark-mode .container {
-    background: #2c2c3f;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
-}
-
-body.dark-mode .header h1,
-body.dark-mode .select-label {
-    color: #f0f0f0;
-}
-
-body.dark-mode #prompt-input,
-body.dark-mode .custom-select {
-    background: #3a3a4f;
-    color: #fff;
-    border: 1px solid #555;
-}
-
-body.dark-mode .prompt-container button,
-body.dark-mode .generate-btn {
-    background-color: #8e44ad;
-}
-
-body.dark-mode .prompt-container button:hover,
-body.dark-mode .generate-btn:hover {
-    background-color: #732d91;
-}
-
+/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;600;700&display=swap');
 
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Base Styles */
 body {
   font-family: 'Inter', sans-serif;
   min-height: 100vh;
@@ -49,15 +19,17 @@ body {
   padding: 20px;
 }
 
+/* Container */
 .container {
   background: #fff;
   border-radius: 16px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   padding: 24px;
-  max-width: 500px;
+  max-width: 900px;
   width: 100%;
 }
 
+/* Header */
 .header {
   display: flex;
   justify-content: space-between;
@@ -72,22 +44,23 @@ body {
 }
 
 .logo i {
-  font-size: 24px;
+  font-size: 40px;
   color: #6c5ce7;
 }
 
 .header h1 {
-  font-size: 20px;
+  font-size: 40px;
   color: #333;
   font-weight: 600;
 }
 
+/* Theme Toggle */
 .theme-toggle {
   background: none;
   border: none;
-  font-size: 20px;
+  font-size: 30px;
   cursor: pointer;
-  color: #555;
+  color: #373535;
   transition: color 0.3s;
 }
 
@@ -95,6 +68,7 @@ body {
   color: #000;
 }
 
+/* Prompt Form */
 .prompt-form {
   display: flex;
   flex-direction: column;
@@ -102,38 +76,48 @@ body {
 }
 
 .prompt-container {
-  display: flex;
-  gap: 8px;
+  position: relative;
+  width: 100%;
 }
 
 #prompt-input {
-  flex: 1;
+  width: 100%;
   padding: 12px;
   border-radius: 8px;
   border: 1px solid #ccc;
   resize: vertical;
   font-size: 14px;
+  height: 200px;
 }
 
-.prompt-container button {
+/* Small Button on top-right of textarea */
+#input-btn {
+  position: absolute;
+  top: 150px;
+  right: 10px;
   background-color: #6c5ce7;
   border: none;
   color: white;
-  padding: 0 16px;
-  border-radius: 8px;
+  padding: 10px;
+  border-radius: 50%;
   cursor: pointer;
-  font-size: 18px;
-  transition: background-color 0.3s;
-}
-
-.prompt-container button:hover {
-  background-color: #5a4bcf;
-}
-
-.prompt-actions {
+  font-size: 16px;
   display: flex;
-  flex-direction: column;
-  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#input-btn:hover {
+  background-color: #5a4bcf;
+  transform: scale(1.05);
+}
+
+/* Prompt Actions Grid */
+.prompt-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
 }
 
 .select-wrapper {
@@ -155,6 +139,7 @@ body {
   cursor: pointer;
 }
 
+/* Generate Button */
 .generate-btn-container {
   display: flex;
   justify-content: center;
@@ -180,6 +165,7 @@ body {
   transform: translateY(-2px);
 }
 
+/* Image Gallery */
 .image-gallery {
   margin-top: 20px;
   display: grid;
@@ -192,4 +178,91 @@ body {
   border-radius: 8px;
   object-fit: cover;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background: linear-gradient(135deg, #1e1e2f, #2c2c40);
+  color: #f0f0f0;
+}
+
+body.dark-mode .container {
+  background: #2c2c3f;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .header h1,
+body.dark-mode .select-label {
+  color: #f0f0f0;
+}
+
+body.dark-mode #prompt-input,
+body.dark-mode .custom-select {
+  background: #3a3a4f;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+body.dark-mode #input-btn,
+body.dark-mode .generate-btn {
+  background-color: #8e44ad;
+}
+
+body.dark-mode #input-btn:hover,
+body.dark-mode .generate-btn:hover {
+  background-color: #732d91;
+}
+/* Image Gallery */
+.image-gallery {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* auto-fit grid for even alignment */
+  gap: 15px;
+  justify-content: center; /* center align in container */
+}
+
+/* Image Card */
+.image-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.image-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.image-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Download Button */
+.download-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0,0,0,0.6);
+  border: none;
+  color: white;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.image-card:hover .download-btn {
+  opacity: 1;
+}
+
+.download-btn:hover {
+  background: rgba(0,0,0,0.8);
 }

@@ -21,74 +21,91 @@
       </button>
     </header>
 
-    <main class="main-container">
-      <form action="#" class="prompt-form">
-        <div class="prompt-container">
-          <textarea 
-            id="prompt-input" 
-            placeholder="Describe your imagination in detail..." 
-            required 
-            autofocus>
-          </textarea>
-          <button class="generate-btn" type="submit">
-            <i class="fa-solid fa-dice"></i>
-          </button>
-        </div>
+   <main class="main-container">
+  <form action="#" class="prompt-form">
 
-        <div class="prompt-actions">
+    <div class="prompt-container">
+      <textarea id="prompt-input" placeholder="Describe your imagination here"></textarea>
+      <button class="generate-btn" type="submit" id="input-btn">
+        <i class="fa-solid fa-dice"></i>
+      </button>
+    </div>
 
-          <!-- Model Selection -->
-          <div class="select-wrapper">
-            <label for="model-select" class="select-label">Select Model:</label>
-            <select id="model-select" class="custom-select" required>
-              <option value="" selected disabled>Select Model</option>
-              <option value="dalle-3">DALL·E 3</option>
-              <option value="sdxl">Stable Diffusion XL</option>
-              <option value="midjourney">MidJourney</option>
-            </select>
-          </div>
+    <!-- Move prompt-actions here -->
+    <div class="prompt-actions">
 
-          <!-- Image Quantity Selection -->
-          <div class="select-wrapper">
-            <label for="image-quantity" class="select-label">Image Quantity:</label>
-            <select id="image-quantity" class="custom-select" required>
-              <option value="" selected disabled>Select Quantity</option>
-              <option value="1">1 Image</option>
-              <option value="2">2 Images</option>
-              <option value="3">3 Images</option>
-              <option value="4">4 Images</option>
-              <option value="5">5 Images</option>
-            </select>
-          </div>
+      <!-- Model Selection -->
+      <div class="select-wrapper">
+        <label for="model-select" class="select-label">Select Model:</label>
+        <select id="model-select" class="custom-select" required>
+          <option value="" selected disabled>Select Model</option>
+          <option value="dalle-3">DALL·E 3</option>
+          <option value="sdxl">Stable Diffusion XL</option>
+          <option value="midjourney">MidJourney</option>
+        </select>
+      </div>
 
-          <!-- Page Type Selection -->
-          <div class="select-wrapper">
-            <label for="page-type" class="select-label">Page Type:</label>
-            <select id="page-type" class="custom-select" required>
-              <option value="" selected disabled>Select Page Type</option>
-              <option value="landscape">Landscape</option>
-              <option value="portrait">Portrait</option>
-              <option value="square">Square</option>
-              <option value="panorama">Panorama</option>
-            </select>
-          </div>
+      <!-- Image Quantity Selection -->
+      <div class="select-wrapper">
+        <label for="image-quantity" class="select-label">Image Quantity:</label>
+        <select id="image-quantity" class="custom-select" required>
+          <option value="" selected disabled>Select Quantity</option>
+          <option value="1">1 Image</option>
+          <option value="2">2 Images</option>
+          <option value="3">3 Images</option>
+          <option value="4">4 Images</option>
+          <option value="5">5 Images</option>
+        </select>
+      </div>
 
-        </div>
+      <!-- Page Type Selection -->
+      <div class="select-wrapper">
+        <label for="page-type" class="select-label">Page Type:</label>
+        <select id="page-type" class="custom-select" required>
+          <option value="" selected disabled>Select Page Type</option>
+          <option value="landscape">Landscape</option>
+          <option value="portrait">Portrait</option>
+          <option value="square">Square</option>
+          <option value="panorama">Panorama</option>
+        </select>
+      </div>
 
-        <!-- Generate Button -->
-        <div class="generate-btn-container">
-          <button class="generate-btn" type="submit">
-            <i class="fa-solid fa-magic-wand-sparkles"></i> Generate
-          </button>
-        </div>
+    </div>
 
-      </form>
+    <!-- Generate Button -->
+    <div class="generate-btn-container">
+      <button class="generate-btn" type="submit">
+        <i class="fa-solid fa-magic-wand-sparkles"></i> Generate
+      </button>
+    </div>
 
-      <section class="image-gallery">
-        <!-- Generated images will appear here -->
-      </section>
-    </main>
+  </form>
+
+ <div class="image-gallery">
+  <div class="image-card">
+    <img src="/assets/random.jpg" alt="Generated Image" />
+    <button class="download-btn" aria-label="Download">
+      <i class="fa-solid fa-download"></i>
+    </button>
+  
+</div>
+  <div class="image-card">
+    <img src="/assets/random.jpg" alt="Generated Image" />
+    <button class="download-btn" aria-label="Download">
+      <i class="fa-solid fa-download"></i>
+    </button>
+  
+</div>
+
+  <div class="image-card">
+    <img src="/assets/random.jpg" alt="Generated Image" />
+    <button class="download-btn" aria-label="Download">
+      <i class="fa-solid fa-download"></i>
+    </button>
   </div>
+</div>
+</main>
+
 
   <script src="script.js"></script>
 </body>
